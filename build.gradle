@@ -41,7 +41,7 @@ abstract class JacksonBomAlignmentRule implements ComponentMetadataRule {
     void execute(ComponentMetadataContext ctx) {
         ctx.details.with {
             if (id.group.startsWith("com.fasterxml.jackson")) {
-                // declare that Jackson modules belong to the platform defined by the Jackson BOM
+                // declaring that Jackson modules belong to the platform defined by the Jackson BOM
                 belongsTo("com.fasterxml.jackson:jackson-bom:${id.version}", false)
             }
         }
